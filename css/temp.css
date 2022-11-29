@@ -1,0 +1,48 @@
+
+.service_div_wrapper {
+    position: relative;
+    min-height: 80vh;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+}
+
+.service_div {
+    min-height: 80vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    background: white;
+    padding: 40px;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.service_div:nth-child(n):hover {
+    transition: 0.2s ease-in-out;
+    width: 100%;
+}
+
+.service_div:nth-child(n):hover p {
+    display: block;
+    animation: fade 0.6s ease-in-out;
+}
+
+.service_div:nth-child(n):hover h1 {
+    font-size: 3.5rem;
+    transition: all 0.1s ease-in-out;
+}
+
+.service_div h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.service_div p {
+    max-width: 600px;
+    display: none;
+    font-size: 1.4rem;
+}

@@ -1,0 +1,51 @@
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 4rem;
+    padding: 4rem;
+    border-top: 2px solid rgb(189, 189, 189);
+    position: static;
+    bottom: 0;
+}
+
+footer div {
+    min-width: 150px;
+}
+
+footer h1 {
+    font-size: 2rem;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #666;
+}
+
+footer .description {
+    font-size: 1rem;
+    margin: 1rem 0;
+    max-width: 10rem;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+footer ul li{
+    cursor: pointer;
+}
+footer ul li a{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.border-none {
+    border: none;
+}
