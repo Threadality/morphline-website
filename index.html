@@ -16,34 +16,35 @@
 <body>
     <div class="cursor"></div>
     <div class="o-scroll" id="js-scroll" data-scroll-container style="background-color: #dedede">
+        <nav data-scroll-section style="padding: 0 40px;" class="navbar">
+            <div class="c-header_heading">
+                <div class="o-layout">
+                    <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal"
+                        data-scroll-speed="-2" data-scroll-position="top" data-scroll-target="#header">
+                        <span class="u-label c-header_heading_label">
+                            <a href="/">
+                                Morphline.studio
+                            </a>
+                        </span>
+                    </div>
+                    <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal"
+                        data-scroll-speed="2" data-scroll-position="top" data-scroll-target="#header">
+                        <div class="u-text-right">
+                            <a id="menuIcon" class="u-label c-header_heading_label">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" style="width: 40px;">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <div data-scroll-section>
             <div class="o-container">
                 <header class="c-header" id="header">
-                    <div class="c-header_heading" data-scroll data-scroll-speed="-8" data-scroll-position="top"
-                        data-scroll-target="#header" data-scroll-repeat>
-                        <div class="o-layout">
-                            <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal"
-                                data-scroll-speed="-2" data-scroll-position="top" data-scroll-target="#header">
-                                <span class="u-label c-header_heading_label">
-                                    <a href="/">
-                                        Morphline.studio
-                                    </a>
-                                </span>
-                            </div>
-                            <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal"
-                                data-scroll-speed="2" data-scroll-position="top" data-scroll-target="#header">
-                                <div class="u-text-right">
-                                    <a id="menuIcon" class="u-label c-header_heading_label">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" style="width: 40px;">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <h1 class="c-header_title o-h1" data-scroll>
                         <span class="c-header_title_line">
                             <span data-scroll data-scroll-speed="3" data-scroll-position="top">Morphline</span>
@@ -55,10 +56,9 @@
                             <span class="small-h">We are a boutique design and <br> development organization</span>
                         </span>
                     </h1>
-                    <img src="/assets/butterfly.svg" class="butterfly"
-                        alt="">
+                    <img src="/assets/butterfly.svg" class="butterfly" alt="">
 
-                    <hr class="c-header_line" data-scroll data-scroll-offset="100" />
+                    <!-- <hr class="c-header_line" data-scroll data-scroll-offset="100" /> -->
 
                 </header>
             </div>
@@ -128,8 +128,7 @@
                     <div class="img-rotate">
                         <img src="/assets/logoWithText.png" alt="">
                         <div class="img_rotate_overlay"></div>
-                        <img src="/assets/butterfly.svg"
-                            class="fixed_image" alt="">
+                        <img src="/assets/butterfly.svg" class="fixed_image" alt="">
                     </div>
 
                 </div>
@@ -137,26 +136,18 @@
         </section>
 
         <section data-scroll-section>
-            <div class="o-container">
-                <span class="c-lerp-block_title font-medium" data-scroll>
-                    <span data-scroll data-scroll-delay="0.1" data-scroll-speed="1">H</span>
-                    <span data-scroll data-scroll-delay="0.1" data-scroll-speed="1">O</span>
-                    <span data-scroll data-scroll-delay="0.1" data-scroll-speed="1">W</span>
+            <div class="o-container" >
+                <span class="c-lerp-block_title font-medium">
+                    <span data-scroll data-scroll-delay="0.1" data-scroll-speed="1">HOW</span>
                     <span data-scroll data-scroll-delay="0.1" data-scroll-speed="1"> </span>
-                    <span data-scroll data-scroll-delay="0.1" data-scroll-speed="1">W</span>
-                    <span data-scroll data-scroll-delay="0.1" data-scroll-speed="1">E</span>
+                    <span data-scroll data-scroll-delay="0.1" data-scroll-speed="1">WE</span>
                     <span data-scroll data-scroll-delay="0.1" data-scroll-speed="1"> </span>
-                    <span class="u-white" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">W</span>
-                    <span class="u-white" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">O</span>
-                    <span class="u-white" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">R</span>
-                    <span class="u-white" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">K</span>
+                    <span class="u-white" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">WORK</span>
                 </span>
                 <!-- <h2 style="font-size: 60px; margin-bottom: 10px;" class="font-semibold">How We <span class="u-white">Work</span></h2> -->
-                <hr class="c-cta_line" data-scroll data-scroll-offset="200" />
+                <hr class="c-cta_line" data-scroll data-scroll-offset="200" data-scroll-repeat="true" />
 
                 <div class="c-summary">
-                    <div class="o-layout -gutter">
-
                         <div class="o-layout_item u-3/5@from-medium">
                             <ul class="c-summary_list" id="work">
 
@@ -170,7 +161,8 @@
                                 </li>
                                 <p class="hidden">Brain storm with our team using design LUNA, an ISO certified design
                                     thinking process
-                                    learn more from here (<a href="www.threadality.com/luna">threadality.com/luna</a>).
+                                    learn more from here (<a href="www.threadality.com/luna"
+                                        class="hover-underline arrow">threadality.com/luna</a>).
                                 </p>
                                 <hr />
                                 <li class="c-summary_list_item u-label" data-scroll data-scroll-repeat="true">
@@ -218,15 +210,10 @@
                                     </a>
                                 </li>
                                 <p class="hidden">Have an idea but not clear how to move forward, we offer the helping
-                                    hand "learn
-                                    more(button)"</p>
+                                    hand <a href="/incubation.html" class="hover-underline arrow">learn more</a></p>
                             </ul>
                         </div>
-                        <div class="o-layout_item u-2/5@from-medium">
-                            <img src="/assets/butterfly.svg"
-                                class="butterfly" alt="">
-                        </div>
-                    </div>
+                        <img src="/assets/butterfly.svg" class="butterfly" style="bottom: 20%" alt="">
                 </div>
             </div>
         </section>
@@ -237,33 +224,33 @@
         <section data-scroll-section>
             <div class="">
                 <div style="padding:40px">
-                    <span class="c-lerp-block_title font-medium" data-scroll>
-                        <span data-scroll data-scroll-delay="0.1" data-scroll-speed="1">OUR</span>
+                    <span class="c-lerp-block_title font-medium">
+                        <span data-scroll data-scroll-speed="1">OUR</span>
                         <span> </span>
-                        <span class="u-white" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">SERVICES</span>
+                        <span class="u-white" data-scroll data-scroll-speed="1">SERVICES</span>
                     </span>
-                    <hr class="c-cta_line" data-scroll data-scroll-offset="200" />
+                    <hr class="c-cta_line" data-scroll data-scroll-offset="300" data-scroll-repeat="true" />
                 </div>
 
                 <div class="service_div_wrapper">
                     <div class="service_div" id="service_div1">
-                        <h1>Branding and logo</h1>
-                        <p>A step by step approach in understanding the emotion behind the product to penning down
+                        <h1 class="line-clamp-2">Branding and logo</h1>
+                        <p class="line-clamp-4">A step by step approach in understanding the emotion behind the product to penning down
                             eye-catching logos and colors which portray your thoughts.</p>
                     </div>
                     <div class="service_div" id="service_div2">
-                        <h1>Illustrations</h1>
-                        <p>From beautiful hand drawn art to stunning digital illustrations, we make your products story
+                        <h1 class="line-clamp-2">Illustrations</h1>
+                        <p class="line-clamp-4">From beautiful hand drawn art to stunning digital illustrations, we make your products story
                             be told to the everyone .</p>
                     </div>
                     <div class="service_div" id="service_div3">
-                        <h1>Development</h1>
-                        <p>Latest stacks and development practices with a cloud first approach, we make sure your
+                        <h1 class="line-clamp-2">Development</h1>
+                        <p class="line-clamp-4">Latest stacks and development practices with a cloud first approach, we make sure your
                             product is secure, fast and reliable. Also ensuring its easy for future enhancements.</p>
                     </div>
                     <div class="service_div" id="service_div4">
-                        <h1>Training</h1>
-                        <p>Testing with closed user groups, automated test suits and our inhouse tools, we make sure
+                        <h1 class="line-clamp-2">Training</h1>
+                        <p class="line-clamp-4">Testing with closed user groups, automated test suits and our inhouse tools, we make sure
                             your product is fail safe.</p>
                     </div>
                 </div>
@@ -282,8 +269,8 @@
                             <!-- Front -->
                             <ul class='hardcover_front'>
                                 <li>
-                                    <img src="/assets/book_cover.png"
-                                        alt="" style="width: 100%; height: 100%; object-fit: cover">
+                                    <img src="/assets/book_cover2.png" alt=""
+                                        style="width: 100%; height: 100%; object-fit: cover">
                                 </li>
                                 <li></li>
                             </ul>
@@ -329,7 +316,7 @@
                             <span>It Happen</span>
                         </span>
                     </h1>
-                    <a class="help_p flex items-center gap-2 cursor-pointer button-hover-dark" data-scroll
+                    <a class="help_p flex items-center gap-2 cursor-pointer button-hover-dark arrow" data-scroll
                         data-scroll-repeat="true" data-scroll-speed="1">
                         <span>We Love Making Friends</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -341,8 +328,7 @@
 
                     </a>
                     <div class="butterflyWithText">
-                        <img src="/assets/butterflyWithText.svg"
-                            class="fixed_image" alt="">
+                        <img src="/assets/butterflyWithText.svg" class="fixed_image" alt="">
                     </div>
                 </div>
             </div>
@@ -352,18 +338,17 @@
 
         <footer data-scroll-section class="">
             <div>
-                <h1 class="">Threadality</h1>
-                <p class="description border-none">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque,
-                    inventore.</p>
+                <h1 class="">Morphline studios</h1>
+                <p class="description border-none">We help make it happen</p>
                 <p class="border-none">&copy;Copyright Threadality</p>
             </div>
             <div>
                 <p>Navigate to</p>
                 <ul>
-                    <li><a>Menu</a></li>
-                    <li><a>Promo</a></li>
-                    <li><a>Contact</a></li>
-                    <li><a>About us</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/portfolio.html">Our Portfolio</a></li>
+                    <li><a href="/incubation.html">Design Incubation</a></li>
+                    <li><a href="/contact.html">Contact us</a></li>
                 </ul>
             </div>
 
@@ -372,49 +357,16 @@
                 <ul>
                     <li>
                         <span style=" margin-right: 4px">
-                            <img width="20" height="20"
-                                src="/assets/location.png" alt="">
+                            <img width="20" height="20" src="/assets/mail.png" alt="">
                         </span>
                         <a>
-                            8819 Ohio St. South Gate, CA 90280
-                        </a>
-                    </li>
-                    <li>
-                        <span style=" margin-right: 4px">
-                            <img width="20" height="20"
-                                src="/assets/mail.png" alt="">
-                        </span>
-                        <a>
-                            ourstudio@hello.com
-                        </a>
-                    </li>
-                    <li>
-                        <span style=" margin-right: 4px">
-                            <img width="20" height="20"
-                                src="/assets/telephone.png" alt="">
-                        </span>
-                        <a>
-                            +1286-272-3636
+                            hello@morphline.studio 
                         </a>
                     </li>
                 </ul>
             </div>
             <div>
-                <p>Follow Us</p>
-                <p class="border-none gap-2 flex items-center">
-                    <a>
-                        <img width="32" height="32"
-                            src="/assets/instagram.png" alt="">
-                    </a>
-                    <a>
-                        <img width="32" height="32"
-                            src="/assets/linkedin.png" alt="">
-                    </a>
-                    <a>
-                        <img width="32" height="32"
-                            src="/assets/twitter.png" alt="">
-                    </a>
-                </p>
+                <img src="/assets/stamp.png" class="stamp_image" alt="">
             </div>
         </footer>
 
@@ -455,14 +407,12 @@
                         </a>
                     </li>
                     <li class="o-title" data-scroll data-scroll-repeat="true">
-                        <a href="/portfolio.html"><span
-                                class="o-title_line u-white">
-                                <span>• Our Products</span>
+                        <a href="/portfolio.html"><span class="o-title_line u-white">
+                                <span>• Our Portfolio</span>
                             </span>
                     </li>
                     <li class="o-title" data-scroll data-scroll-repeat="true">
-                        <a href="/incubation.html"><span
-                                class="o-title_line u-white">
+                        <a href="/incubation.html"><span class="o-title_line u-white">
                                 <span>• Design Incubation</span>
                             </span></a>
                     </li>
@@ -478,8 +428,7 @@
                     </li>
                 </ul>
             </div>
-            <img src="/assets/butterfly.svg" class="butterfly"
-                style="right: -80px;bottom:44px" alt="">
+            <img src="/assets/butterfly.svg" class="butterfly" style="right: -80px;bottom:32px" alt="">
         </section>
     </div>
     <script src="/js/main.js"></script>
@@ -499,9 +448,9 @@
         service_div1.onclick = () => {
             service_div1.style.width = '55vw'
             service_div1.style.background = '#fff'
-            service_div2.style.background = 'transparent'
-            service_div3.style.background = 'transparent'
-            service_div4.style.background = 'transparent'
+            service_div2.style.background = '#EDEDED'
+            service_div3.style.background = '#EDEDED'
+            service_div4.style.background = '#EDEDED'
 
             service_div2.style.width = '15vw'
             service_div3.style.width = '15vw'
@@ -510,9 +459,9 @@
         service_div2.onclick = () => {
             service_div2.style.width = '55vw'
             service_div2.style.background = '#fff'
-            service_div1.style.background = 'transparent'
-            service_div3.style.background = 'transparent'
-            service_div4.style.background = 'transparent'
+            service_div1.style.background = '#EDEDED'
+            service_div3.style.background = '#EDEDED'
+            service_div4.style.background = '#EDEDED'
 
             service_div1.style.width = '15vw'
             service_div3.style.width = '15vw'
@@ -521,9 +470,9 @@
         service_div3.onclick = () => {
             service_div3.style.width = '55vw'
             service_div3.style.background = '#fff'
-            service_div2.style.background = 'transparent'
-            service_div1.style.background = 'transparent'
-            service_div4.style.background = 'transparent'
+            service_div2.style.background = '#EDEDED'
+            service_div1.style.background = '#EDEDED'
+            service_div4.style.background = '#EDEDED'
 
             service_div2.style.width = '15vw'
             service_div1.style.width = '15vw'
@@ -532,9 +481,9 @@
         service_div4.onclick = () => {
             service_div4.style.width = '55vw'
             service_div4.style.background = '#fff'
-            service_div2.style.background = 'transparent'
-            service_div3.style.background = 'transparent'
-            service_div1.style.background = 'transparent'
+            service_div2.style.background = '#EDEDED'
+            service_div3.style.background = '#EDEDED'
+            service_div1.style.background = '#EDEDED'
 
             service_div2.style.width = '15vw'
             service_div3.style.width = '15vw'
@@ -543,10 +492,21 @@
 
         let work = document.querySelectorAll('#work li');
         let p = document.querySelectorAll("#work p")
+        let sp = document.querySelectorAll("#work li a span");
 
         work.forEach((item, i) => {
             item.onclick = () => {
-                p[i].classList.toggle('show_p')
+                sp[i].classList.toggle('rotate-180');
+                p[i].classList.toggle('show_p');
+                work.forEach((item, idx) => {
+                    if (idx == i) {
+
+                    }
+                    else{
+                        sp[idx].classList.remove('rotate-180')
+                        p[idx].classList.remove('show_p')
+                    }
+                })
             }
         })
 
@@ -558,3 +518,10 @@
 </html>
 
 <!-- https://youtu.be/zwl3kZPZ8H8 -->
+
+
+<!-- butterfly in how we work : up and left increase -->
+<!-- drop down in contact page  -->
+<!-- cursor enter animation  -->
+<!-- portfolio page updates  -->
+<!-- invert down arrow in how it works  -->

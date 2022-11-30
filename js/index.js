@@ -65,23 +65,20 @@ document.querySelectorAll('.cursor').forEach(cursor => {
 
   document.querySelectorAll("a").forEach(ele => {
     ele.addEventListener('mouseenter', () => {
-      cursor.classList.add('link')
+      cursor.classList.add('link', ele.classList.contains('arrow') ? 'arrow' : 'n')
     })
     ele.addEventListener('mouseleave', () => {
-      cursor.classList.remove('link')
+      cursor.classList.remove('link', ele.classList.contains('arrow') ? 'arrow' : 'n')
     })
   })
 
   document.querySelectorAll(".product").forEach(ele => {
     ele.addEventListener('mouseenter', () => {
-      cursor.classList.add('hidden')
+      cursor.classList.add('openProject')
     })
     ele.addEventListener('mouseleave', () => {
-      cursor.classList.remove('hidden')
+      cursor.classList.remove('openProject')
     })
   })
 
 })
-
-
-

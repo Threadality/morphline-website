@@ -12,7 +12,7 @@ footer {
 }
 
 footer div {
-    min-width: 150px;
+    min-width: 180px;
 }
 
 footer h1 {
@@ -29,14 +29,14 @@ footer p {
 footer .description {
     font-size: 1rem;
     margin: 1rem 0;
-    max-width: 10rem;
+    max-width: 12rem;
 }
 
 footer ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 4px;
 }
 footer ul li{
     cursor: pointer;
@@ -44,6 +44,11 @@ footer ul li{
 footer ul li a{
     font-size: 1.1rem;
     cursor: pointer;
+}
+footer .stamp_image{
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
 }
 
 .border-none {

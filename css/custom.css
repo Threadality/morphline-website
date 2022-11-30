@@ -11,9 +11,9 @@ section {
     width: var(--width);
     height: var(--height);
     transform: translate(calc(var(--x) - var(--width) / 2), calc(var(--y) - var(--height) / 2));
-    /* transition-duration: 125ms;
+    transition-duration: 125ms;
     transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
-    transition-property: width, height, transform; */
+    transition-property: width, height, transform;
     transition: 150ms width cubic-bezier(0.39, 0.575, 0.565, 1),
         150ms height cubic-bezier(0.39, 0.575, 0.565, 1),
         150ms transform cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -35,11 +35,12 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: var(--radius);
-    background-color: #fff;
-    border: 2px solid #3c3c3c;
+    border-radius: 50%;
+    background-color: #999;
+    filter: invert(1);
+    /* border: 2px solid #3c3c3c; */
     /* background-color: rgba(101, 105, 105, 0.863); */
-    opacity: var(--scale);
+    opacity: 1;
     -webkit-transform: scale(var(--scale));
     transform: scale(var(--scale));
     transition: 300ms opacity cubic-bezier(0.39, 0.575, 0.565, 1),
@@ -52,6 +53,158 @@ html:not(html:hover) .cursor::after {
     transform: scale(0);
 }
 
+
+.circle_entered.cursor::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    -webkit-transform: scale(5);
+    transform: scale(5);
+    transition: 300ms opacity cubic-bezier(0.39, 0.575, 0.565, 1),
+        300ms transform cubic-bezier(0.39, 0.575, 0.565, 1),
+        150ms border-radius cubic-bezier(0.39, 0.575, 0.565, 1);
+    clip-path: circle(50px at var(--x) var(--y));
+}
+
+.link.cursor::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #3c3c3c;
+    transform: scale(1.6);
+    transition: 300ms opacity cubic-bezier(0.39, 0.575, 0.565, 1),
+        300ms transform cubic-bezier(0.39, 0.575, 0.565, 1),
+        150ms border-radius cubic-bezier(0.39, 0.575, 0.565, 1);
+    /* clip-path: circle(50px at var(--x) var(--y)); */
+}
+
+.link.arrow.cursor::before {
+    content: '\2197';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #dedede;
+    filter: invert(1);
+    transform: translate(-50%, -50%) scale(2);
+}
+
+.openProject.cursor::before {
+    content: "Open Link";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #ffffff;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    padding: 3.5rem 0;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.openProject.cursor::after {
+    content: '\2197';
+    position: absolute;
+    margin-left: 3rem;
+    margin-bottom: -3rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    filter: none;
+    transform: scale(1.4);
+}
+
+
+.workshop_text_with_circle:hover {
+    clip-path: circle(200px at var(--x) var(--y));
+    color: #fff;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+}
+
+
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.translate-y-4 {
+    transform: translateY(-4rem);
+}
+
+.p-1 {
+    padding: 4px;
+}
+
+.p-2 {
+    padding: 8px;
+}
+
+.px-1 {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.px-2 {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.py-1 {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.py-2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+}
+
+.rotate-180 {
+    transform: rotate(180deg) !important;
+    transition: all 0.1s ease-in-out;
+}
 
 .hidden {
     display: none;
@@ -93,6 +246,10 @@ html:not(html:hover) .cursor::after {
     justify-content: center;
 }
 
+.justify-end {
+    justify-content: end;
+}
+
 .justify-between {
     justify-content: space-between;
 }
@@ -127,6 +284,7 @@ html:not(html:hover) .cursor::after {
         opacity: 1;
     }
 }
+
 
 .img-rotate {
     position: relative;
@@ -180,7 +338,7 @@ html:not(html:hover) .cursor::after {
 .butterflyWithText {
     position: absolute;
     right: 8rem;
-    bottom: 2rem;
+    bottom: 16%;
     width: 340px;
     height: 340px;
     /* margin-left: auto;
@@ -190,7 +348,7 @@ html:not(html:hover) .cursor::after {
 .help_p {
     background: #fff;
     color: black;
-    padding: 8px 16px;
+    padding: 12px 20px;
     max-width: max-content;
     font-weight: 600;
     font-size: 28px;
@@ -200,7 +358,7 @@ html:not(html:hover) .cursor::after {
     width: 450px;
     height: 450px;
     position: absolute;
-    bottom: 10%;
+    bottom: 8%;
     right: -10%;
     transform: rotate(-30deg);
     opacity: 0.05;
@@ -208,14 +366,14 @@ html:not(html:hover) .cursor::after {
 
 .service_div_wrapper {
     position: relative;
-    min-height: 80vh;
+    min-height: 70vh;
     width: 100%;
     display: flex;
     max-width: 100%;
 }
 
 .service_div {
-    height: 80vh;
+    height: 70vh;
     overflow: hidden;
     width: 15vw;
     display: flex;
@@ -228,7 +386,7 @@ html:not(html:hover) .cursor::after {
     box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
     flex-shrink: 0;
     transition: all 0.4s ease-in-out;
-    background: #dedede;
+    background: #ededed;
 }
 
 .service_div:nth-child(1) {
@@ -252,6 +410,7 @@ html:not(html:hover) .cursor::after {
 }
 
 .show_p {
+    font-size: 1.3rem;
     display: block;
     animation: fade 0.6s ease-in-out;
 }
@@ -261,12 +420,11 @@ html:not(html:hover) .cursor::after {
     overflow: hidden;
     font-size: 3.5rem;
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .service_div p {
     max-width: 600px;
-    height: 140px;
     overflow: hidden;
     font-size: 1.4rem;
 }
@@ -283,50 +441,7 @@ html:not(html:hover) .cursor::after {
 
 .workshop_text {
     font-size: 6rem;
-    max-width: 1200px;
-}
-
-.circle_entered.cursor::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 2px solid #eee;
-    opacity: 0.2;
-    -webkit-transform: scale(5);
-    transform: scale(5);
-    transition: 300ms opacity cubic-bezier(0.39, 0.575, 0.565, 1),
-        300ms transform cubic-bezier(0.39, 0.575, 0.565, 1),
-        150ms border-radius cubic-bezier(0.39, 0.575, 0.565, 1);
-    clip-path: circle(50px at var(--x) var(--y));
-}
-
-.link.cursor::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 2px solid #3c3c3c;
-    transform: scale(1.6);
-    transition: 300ms opacity cubic-bezier(0.39, 0.575, 0.565, 1),
-        300ms transform cubic-bezier(0.39, 0.575, 0.565, 1),
-        150ms border-radius cubic-bezier(0.39, 0.575, 0.565, 1);
-    /* clip-path: circle(50px at var(--x) var(--y)); */
-
-}
-
-
-.workshop_text_with_circle:hover {
-    clip-path: circle(200px at var(--x) var(--y));
-    color: #fff;
+    max-width: 1280px;
 }
 
 .u-light {
@@ -349,6 +464,10 @@ html:not(html:hover) .cursor::after {
     margin: 0;
 }
 
+.workshop .c-summary_list_item:last-child {
+    margin-bottom: 0;
+}
+
 .workshop .c-summary_list_item.is-inview:after {
     opacity: 0;
 }
@@ -367,6 +486,7 @@ html:not(html:hover) .cursor::after {
 
 .summary_heading {
     font-size: 4rem;
+    min-width: 20rem
 }
 
 .button-hover-dark:hover {
@@ -409,7 +529,8 @@ html:not(html:hover) .cursor::after {
     bottom: 2rem;
     right: 1rem;
     left: 1rem;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
     padding: 20px;
     border-radius: 10px;
     transform: translateY(500px);
@@ -422,37 +543,22 @@ html:not(html:hover) .cursor::after {
 
 .product .content h1 {
     font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 0 2px rgb(240, 244, 244);
 }
 
-.product .product_circle {
-    position: absolute;
-    width: 110px;
-    height: 110px;
-    background: transparent;
-    pointer-events: none;
-    transition: 0.1s;
-    clip-path: circle(0px at 10px 10px);
+.product .content p {
+    color: rgb(240, 244, 244);
+    font-weight: 200;
+    text-shadow: 0 0 2px rgb(240, 244, 244);
 }
 
-.product .product_circle span {
-    position: absolute;
-    min-width: max-content;
-    margin-top: 0.5rem;
-    margin-left: 0.1rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.product .content h2 {
+    font-size: 1.2rem;
+    margin: 0.8rem 0;
+    color: rgb(203, 213, 217);
 }
 
-.product:hover .product_circle {
-    background: #fff;
-    clip-path: circle(50px at 60px 60px);
-}
-
-.product .product_circle svg {
-    width: 1rem;
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    filter: drop-shadow(1px 1px 0 #000);
+.portfolio_header_text .o-title_line span {
+    font-size: 6rem;
 }

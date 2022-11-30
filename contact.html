@@ -15,35 +15,35 @@
 <body>
     <div class="cursor"></div>
     <div class="o-scroll" id="js-scroll" data-scroll-container style="background-color: #dedede">
+        <nav data-scroll-section style="padding: 0 40px">
+            <div class="c-header_heading">
+                <div class="o-layout">
+                    <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal"
+                        data-scroll-speed="-2" data-scroll-position="top" data-scroll-target="#header">
+                        <span class="u-label c-header_heading_label">
+                            <a href="/">
+                                Morphline.studio
+                            </a>
+                        </span>
+                    </div>
+                    <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal"
+                        data-scroll-speed="2" data-scroll-position="top" data-scroll-target="#header">
+                        <div class="u-text-right">
+                            <a id="menuIcon" class="u-label c-header_heading_label">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" style="width: 40px;">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <div data-scroll-section>
             <div class="o-container">
                 <header class="c-header" id="header">
-                    <div class="c-header_heading" data-scroll data-scroll-speed="-8" data-scroll-position="top"
-                        data-scroll-target="#header" data-scroll-repeat>
-                        <div class="o-layout">
-                            <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal"
-                                data-scroll-speed="-2" data-scroll-position="top" data-scroll-target="#header">
-                                <span class="u-label c-header_heading_label">
-                                    <a href="/">
-                                        Morphline.studio
-                                    </a>
-                                </span>
-                            </div>
-                            <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal"
-                                data-scroll-speed="2" data-scroll-position="top" data-scroll-target="#header">
-                                <div class="u-text-right">
-                                    <a id="menuIcon" class="u-label c-header_heading_label">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                            style="width: 40px;">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="contact">
 
@@ -58,7 +58,6 @@
                                 <span class="c-header_title_line u-white">
                                     <span data-scroll data-scroll-speed="2" data-scroll-position="top">Touch</span>
                                 </span>
-
                             </h1>
                         </div>
                         <form class="o-layout_item u-2/5@from-medium form_container">
@@ -70,8 +69,21 @@
                                     <input type="text" placeholder="Email id">
                                 </div>
                             </div>
-                            <div>
-                                <input type="text" placeholder="design & development/ incubation/ enquiry">
+                            <div class="options">
+                                <!-- <select name="" id="">
+                                </select> -->
+                                <input type="text" placeholder="Select Category">
+                                <div class="options">
+                                    <a class="button-hover-dark">
+                                        <option value="">Design & development</option>
+                                    </a>
+                                    <a class="button-hover-dark">
+                                        <option value="">Incubation</option>
+                                    </a>
+                                    <a class="button-hover-dark">
+                                        <option value="">Enquiry</option>
+                                    </a>
+                                </div>
                             </div>
                             <div>
                                 <input type="text" placeholder="Message Title">
@@ -79,6 +91,12 @@
                             <div>
                                 <textarea name="" placeholder="Let us know a bit more " id=""
                                     style="resize: none;"></textarea>
+                            </div>
+
+                            <div>
+                                <a class="button-hover-dark">
+                                    <input type="submit" value="Send Message" class="submitBtn">
+                                </a>
                             </div>
                         </form>
                     </div>
@@ -106,8 +124,8 @@
                         data-scroll-speed="2" data-scroll-position="top" data-scroll-target="#header">
                         <div class="u-text-right">
                             <a id="openMenuIcon" class="u-label c-header_heading_label">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 40px">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" style="width: 40px">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             </a>
@@ -128,13 +146,13 @@
                     </li>
                     <li class="o-title" data-scroll data-scroll-repeat="true">
                         <a href="/portfolio.html"><span class="o-title_line u-white">
-                            <span>• Our Products</span>
-                        </span>
+                                <span>• Our Portfolio</span>
+                            </span>
                     </li>
                     <li class="o-title" data-scroll data-scroll-repeat="true">
                         <a href="/incubation.html"><span class="o-title_line u-white">
-                            <span>• Design Incubation</span>
-                        </span></a>
+                                <span>• Design Incubation</span>
+                            </span></a>
                     </li>
                     <li>
                     <li class="o-title" data-scroll data-scroll-repeat="true">
