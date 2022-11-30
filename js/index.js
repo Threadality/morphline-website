@@ -65,10 +65,19 @@ document.querySelectorAll('.cursor').forEach(cursor => {
 
   document.querySelectorAll("a").forEach(ele => {
     ele.addEventListener('mouseenter', () => {
-      cursor.classList.add('link', ele.classList.contains('arrow') ? 'arrow' : 'n')
+      cursor.classList.add('link', ele.classList.contains('arrow') ? 'arrow' : ele.classList.contains('arrow-white') ? 'arrow-white' : 'n')
     })
     ele.addEventListener('mouseleave', () => {
-      cursor.classList.remove('link', ele.classList.contains('arrow') ? 'arrow' : 'n')
+      cursor.classList.remove('link', ele.classList.contains('arrow') ? 'arrow' : ele.classList.contains('arrow-white') ? 'arrow-white' : 'n')
+    })
+  })
+
+  document.querySelectorAll('#submitBtn').forEach(ele => {
+    ele.addEventListener('mouseenter', () => {
+      cursor.classList.add('submit', ele.classList.contains('arrow-send') ? 'arrow-send' : 'n')
+    })
+    ele.addEventListener('mouseleave', () => {
+      cursor.classList.remove('submit', ele.classList.contains('arrow-send') ? 'arrow-send' : 'n')
     })
   })
 

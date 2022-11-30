@@ -96,6 +96,25 @@ html:not(html:hover) .cursor::after {
     filter: invert(1);
     transform: translate(-50%, -50%) scale(2);
 }
+.link.arrow-white.cursor::before {
+    content: '\2197';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    filter: none;
+    transform: translate(-50%, -50%) scale(2);
+}
+
+.link.arrow-send.cursor::before {
+    content: '\2192';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #111;
+    filter: none;
+    transform: translate(-50%, -50%) scale(2);
+}
 
 .openProject.cursor::before {
     content: "Open Link";
@@ -491,6 +510,10 @@ html:not(html:hover) .cursor::after {
 .summary_heading {
     font-size: 4rem;
     min-width: 20rem
+}
+.summary_container p{
+    font-size: 2rem !important;
+    margin-top: 2rem;
 }
 
 .button-hover-dark:hover {

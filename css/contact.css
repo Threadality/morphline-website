@@ -43,14 +43,16 @@
     max-width: max-content;
     text-align: start;
     transition: all 0.2s ease-in-out;
-    padding: 12px 20px;
+    padding: 12px 32px;
     background: white;
     cursor: pointer;
     border-radius: 4px;
+    font-weight: 500;
 }
 .form_container .submitBtn:hover {
     box-shadow: 0 0 10px rgb(178, 177, 177);
 }
+
 
 .options {
     position: relative;
