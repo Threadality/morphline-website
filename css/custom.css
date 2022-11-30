@@ -136,6 +136,10 @@ html:not(html:hover) .cursor::after {
     z-index: 500;
 }
 
+.invert{
+    filter: invert(1);
+}
+
 
 .line-clamp-1 {
     display: -webkit-box;
