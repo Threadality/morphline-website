@@ -71,7 +71,7 @@
     width: 100%;
 }
 
-.options:hover div {
+#category:focus~div {
     display: block;
     transition: all 0.2s ease-in-out;
     animation: fade 0.2s ease-in-out;
