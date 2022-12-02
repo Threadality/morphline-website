@@ -76,6 +76,14 @@
     transition: all 0.2s ease-in-out;
     animation: fade 0.2s ease-in-out;
 }
+.arrow_down{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1%;
+    width: 20px;
+    fill: none;
+}
 
 .options div option {
     padding: 0.4rem 0;

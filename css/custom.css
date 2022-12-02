@@ -96,6 +96,7 @@ html:not(html:hover) .cursor::after {
     filter: invert(1);
     transform: translate(-50%, -50%) scale(2);
 }
+
 .link.arrow-white.cursor::before {
     content: '\2197';
     position: absolute;
@@ -156,7 +157,7 @@ html:not(html:hover) .cursor::after {
     z-index: 500;
 }
 
-.invert{
+.invert {
     filter: invert(1);
 }
 
@@ -184,7 +185,7 @@ html:not(html:hover) .cursor::after {
 
 .line-clamp-4 {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -362,7 +363,8 @@ html:not(html:hover) .cursor::after {
 .butterflyWithText {
     position: absolute;
     right: 8rem;
-    bottom: 16%;
+    /* bottom: 16%; */
+    bottom: 2.3rem;
     width: 340px;
     height: 340px;
     /* margin-left: auto;
@@ -512,7 +514,8 @@ html:not(html:hover) .cursor::after {
     font-size: 4rem;
     min-width: 20rem
 }
-.summary_container p{
+
+.summary_container p {
     font-size: 2rem !important;
     margin-top: 2rem;
 }
@@ -532,14 +535,14 @@ html:not(html:hover) .cursor::after {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     place-items: center;
-    gap: 4rem 0;
+    gap: 4rem;
     padding: 4rem;
 }
 
 .product {
     width: 100%;
     height: 100%;
-    max-width: 30rem;
+    max-width: 36rem;
     min-height: 100%;
     max-height: 30rem;
     overflow: hidden;
@@ -553,7 +556,7 @@ html:not(html:hover) .cursor::after {
     object-fit: cover;
 }
 
-.product .content {
+/* .product .content {
     position: absolute;
     bottom: 2rem;
     right: 1rem;
@@ -565,30 +568,55 @@ html:not(html:hover) .cursor::after {
     border-radius: 10px;
     transform: translateY(500px);
     transition: all 0.6s ease-out;
+} */
+
+.product .content {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1.2s cubic-bezier(.215, .61, .355, 1);
+    border: 1px solid rgba(100, 100, 100, 0.2);
+    padding: 20px;
+    opacity: 0;
+}
+.product:hover img{
+    scale: 1.05;
+    transition: all 0.6s ease;
 }
 
 .product:hover .content {
-    transform: translateY(0px);
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .product .content h1 {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 500;
-    color: #fff;
-    text-shadow: 0 0 2px rgb(240, 244, 244);
+    color: #ffffff;
 }
 
 .product .content p {
-    color: #fff;
     font-weight: 300;
+    color: #ffffff;
+    margin: 1rem 0;
 }
 
 .product .content h2 {
     font-size: 1.2rem;
     margin: 0.8rem 0;
-    color: rgb(240, 240, 240);
+    color: #ffffff;
 }
 
 .portfolio_header_text .o-title_line span {
     font-size: 6rem;
+}
+
+.product.fade-bottom {
+    animation: fade 1.6s ease;
 }
