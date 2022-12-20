@@ -424,3 +424,16 @@ figure {
     }
 
 }
+
+@media (max-width: 600px) {
+    .bookContainer{
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 10rem 0;
+    }
+    .book{
+        width: 210px;
+        height: 300px;
+    }
+    
+}

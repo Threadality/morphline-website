@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Morphline | Contact Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/logo.png" />
 
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="/css/main.css">
@@ -13,6 +14,15 @@
 </head>
 
 <body>
+    <div class="toast-notification hidden">
+        <p></p>
+        <button class="dismiss-button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" style="width: 20px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
     <div class="cursor"></div>
     <div class="o-scroll" id="js-scroll" data-scroll-container style="background-color: #dedede">
         <nav data-scroll-section style="padding: 0 40px">
@@ -60,13 +70,15 @@
                                 </span>
                             </h1>
                         </div>
-                        <form class="o-layout_item u-2/5@from-medium form_container">
+                        <form id="contactForm" class="o-layout_item u-2/5@from-medium form_container">
                             <div class="flex items-center gap-5">
                                 <div>
-                                    <input type="text" placeholder="Name">
+                                    <input type="text" name="name" id="name" placeholder="Name"
+                                        onchange="handleChange(this)">
                                 </div>
                                 <div>
-                                    <input type="text" placeholder="Email id">
+                                    <input type="email" name="email" id="email" placeholder="Email id"
+                                        onchange="handleChange(this)">
                                 </div>
                             </div>
                             <div class="options">
@@ -77,25 +89,30 @@
                                             d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                     </svg>
                                 </label>
-                                <input id="category" readonly type="text" placeholder="Select Category">
-                                <div>
+                                <input id="category" readonly type="text" placeholder="Select Category"
+                                    onchange="handleChange(this)">
+                                <div class="" id="options__div">
                                     <a class="button-hover-dark">
-                                        <option value="">Design & development</option>
+                                        <option id="option" onclick="onCategoryClick(this)"
+                                            value="Design & development">Design & development</option>
                                     </a>
                                     <a class="button-hover-dark">
-                                        <option value="">Incubation</option>
+                                        <option id="option" onclick="onCategoryClick(this)" value="Incubation">
+                                            Incubation</option>
                                     </a>
                                     <a class="button-hover-dark">
-                                        <option value="">Enquiry</option>
+                                        <option id="option" onclick="onCategoryClick(this)" value="Enquiry">Enquiry
+                                        </option>
                                     </a>
                                 </div>
                             </div>
                             <div>
-                                <input type="text" placeholder="Message Title">
+                                <input type="text" placeholder="Message Title" name="message_title" id="message_title"
+                                    onchange="handleChange(this)">
                             </div>
                             <div>
-                                <textarea name="" placeholder="Let us know a bit more " id=""
-                                    style="resize: none;"></textarea>
+                                <textarea name="message" placeholder="Let us know a bit more " id="message"
+                                    onchange="handleChange(this)" style="resize: none;"></textarea>
                             </div>
 
                             <div>
@@ -112,6 +129,8 @@
                 </header>
             </div>
         </div>
+
+
 
         <section class=" c-section nav_overlay hidden" data-scroll-section>
             <div class="c-header_heading" data-scroll data-scroll-speed="-8" data-scroll-position="top"
@@ -175,9 +194,123 @@
         </section>
     </div>
 
+    <div id="alert" class="">
+        <div class="transparent-bg"></div>
+        <div class="alertBox">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+
+            <p>Your message has been sent successfully</p>
+            <a onclick="closePopup()">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg> -->
+                <p style="padding: 8px 16px; border: 1px solid #333; border-radius: 10px;width: max-content;">OK</p>
+            </a>
+
+        </div>
+    </div>
+
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_MakiHHTPMRIhEyg9GFelr");
+        })();
+    </script>
+    <script>
 
+        let alt = document.getElementById('alert')
+        const dismissButton = document.querySelector('.dismiss-button');
+        const toastNotification = document.querySelector('.toast-notification');
+        const notificationText = document.querySelector('.toast-notification p');
+
+        dismissButton.addEventListener('click', () => {
+            toastNotification.classList.toggle('hidden');
+        });
+
+        function hideToggle() {
+            setTimeout(function () {
+                toastNotification.classList.toggle('hidden');
+            }, 3000);
+        }
+
+        var form = document.getElementById("contactForm");
+        form.addEventListener('submit', handleSubmit);
+        let data = {
+            name: '',
+            email: '',
+            category: '',
+            message_title: '',
+            message: ''
+        }
+        function sendEmail() {
+            notificationText.textContent = "Sending message ...."
+            toastNotification.classList.remove('hidden');
+            hideToggle()
+            emailjs.send('service_sv9wgnh', 'template_f1ugzsm', data, 'user_MakiHHTPMRIhEyg9GFelr').then(res => {
+                alt.classList.toggle('show');
+                form.reset();
+            }
+            ).catch(e => {
+                notificationText.textContent = "Unable to send message"
+                toastNotification.classList.remove('hidden');
+                hideToggle()
+            })
+        }
+
+        function closePopup() {
+            alt.classList.toggle('show')
+        }
+
+        function handleChange(e) {
+            data[e.name] = e.value;
+        }
+        function onCategoryClick(e) {
+            data['category'] = e.value;
+            let category = document.getElementById("category")
+            category.value = e.value
+        }
+        function handleSubmit(e) {
+            e.preventDefault();
+            if (!data.name || data.name < 3) {
+                notificationText.textContent = "Please enter a valid name"
+                toastNotification.classList.remove('hidden');
+                hideToggle()
+            } else if (!data.message_title || data.message_title.length < 3) {
+                notificationText.textContent = "Please enter a valid message title"
+                toastNotification.classList.remove('hidden');
+                hideToggle()
+            } else if (!data.message || data.message.length < 10) {
+                notificationText.textContent = "Please enter a valid message"
+                toastNotification.classList.remove('hidden');
+                hideToggle()
+            } else if (!data.category) {
+                notificationText.textContent = "Please select a category"
+                toastNotification.classList.remove('hidden');
+                hideToggle()
+            } else {
+                sendEmail()
+            }
+        }
+
+        window.onclick = (e) => {
+            let options__div = document.getElementById('options__div');
+            if (e.target.id == 'category') {
+                options__div.classList.add('options__div')
+            }
+            else {
+                options__div.classList.remove('options__div')
+            }
+        }
+    </script>
 
 </body>
 

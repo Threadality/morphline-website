@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Morphline | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/logo.png" />
 
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="/css/main.css">
@@ -154,7 +155,7 @@
                             <li class="c-summary_list_item u-label" data-scroll data-scroll-repeat="true">
                                 <a data-scroll-to>
                                     01. Brain storm with design LUNA
-                                    <span class="c-summary_list_icon u-icon">
+                                    <span id="arrow1" class="c-summary_list_icon u-icon">
                                         ↓
                                     </span>
                                 </a>
@@ -168,7 +169,7 @@
                             <li class="c-summary_list_item u-label" data-scroll data-scroll-repeat="true">
                                 <a data-scroll-to>
                                     02. Connect with stake holders
-                                    <span class="c-summary_list_icon u-icon">
+                                    <span id="arrow2" class="c-summary_list_icon u-icon">
                                         ↓
                                     </span>
                                 </a>
@@ -181,7 +182,7 @@
                             <li class="c-summary_list_item u-label" data-scroll data-scroll-repeat="true">
                                 <a data-scroll-to>
                                     03. Create market strategy
-                                    <span class="c-summary_list_icon u-icon">
+                                    <span id="arrow3" class="c-summary_list_icon u-icon">
                                         ↓
                                     </span>
                                 </a>
@@ -193,7 +194,7 @@
                             <li class="c-summary_list_item u-label" data-scroll data-scroll-repeat="true">
                                 <a data-scroll-to>
                                     04. Continuous engagement with key stake holder
-                                    <span class="c-summary_list_icon u-icon">
+                                    <span id="arrow4" class="c-summary_list_icon u-icon">
                                         ↓
                                     </span>
                                 </a>
@@ -204,7 +205,7 @@
                             <li class="c-summary_list_item u-label" data-scroll data-scroll-repeat="true">
                                 <a data-scroll-to>
                                     05. Design incubation with rift first capital
-                                    <span class="c-summary_list_icon u-icon">
+                                    <span id="arrow5" class="c-summary_list_icon u-icon">
                                         ↓
                                     </span>
                                 </a>
@@ -264,15 +265,15 @@
 
         <section class="c-section" style="display: flex; justify-content:center; width: 100%; align-items: center;"
             data-scroll-section>
-            <div class="o-container"
+            <div class="o-container bookContainer"
                 style="display: flex; justify-content:center; width: 100%; align-items: center; gap: 10px;">
 
                 <ul class="align">
                     <li style="margin-right: 50px;list-style: none;">
                         <figure class='book'>
                             <!-- Front -->
-                            <ul data-scroll-class='is-inview' class="hardcover_front" data-scroll-repeat="false" data-scroll-delay="0.5"
-                                data-scroll>
+                            <ul data-scroll-class='is-inview' class="hardcover_front" data-scroll-repeat="false"
+                                data-scroll-delay="0.5" data-scroll>
                                 <li>
                                     <img src="/assets/book_cover2.png" alt=""
                                         style="width: 100%; height: 100%; object-fit: cover">
@@ -321,15 +322,16 @@
                             <span>It Happen</span>
                         </span>
                     </h1>
-                    <a href="/contact.html" class="help_p flex items-center gap-2 cursor-pointer button-hover-dark arrow" data-scroll
+                    <a href="/contact.html"
+                        class="help_p flex items-center gap-2 cursor-pointer button-hover-dark arrow" data-scroll
                         data-scroll-repeat="true" data-scroll-speed="1">
                         <span>We Love Making Friends</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                             style="width: 40px;">
                             <path fill-rule="evenodd"
                                 d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
                                 clip-rule="evenodd" />
-                        </svg>
+                        </svg> -->
 
                     </a>
                     <div class="butterflyWithText">
@@ -495,12 +497,13 @@
             service_div1.style.width = '15vw'
         }
 
+       
         let work = document.querySelectorAll('#work li');
         let p = document.querySelectorAll("#work p")
         let sp = document.querySelectorAll("#work li a span");
 
         work.forEach((item, i) => {
-            item.onclick = () => {
+            item.onclick = (e) => {
                 sp[i].classList.toggle('rotate-180');
                 p[i].classList.toggle('show_p');
                 work.forEach((item, idx) => {
@@ -521,12 +524,3 @@
 </body>
 
 </html>
-
-<!-- https://youtu.be/zwl3kZPZ8H8 -->
-
-
-<!-- butterfly in how we work : up and left increase -->
-<!-- drop down in contact page  -->
-<!-- cursor enter animation  -->
-<!-- portfolio page updates  -->
-<!-- invert down arrow in how it works  -->

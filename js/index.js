@@ -9,7 +9,6 @@ openMenu.onclick = () => {
   nav.classList.add('hidden')
 }
 menu.onclick = () => {
-  console.log('first')
   nav.classList.remove('hidden')
 }
 

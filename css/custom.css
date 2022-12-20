@@ -228,7 +228,12 @@ html:not(html:hover) .cursor::after {
 
 .rotate-180 {
     transform: rotate(180deg) !important;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.01s ease-in-out;
+}
+
+.rotate-0 {
+    transform: rotate(0deg) !important;
+    transition: all 0.01s ease-in-out;
 }
 
 .hidden {
@@ -378,6 +383,7 @@ html:not(html:hover) .cursor::after {
     max-width: max-content;
     font-weight: 600;
     font-size: 28px;
+    transform: translateY(-50px) !important;
 }
 
 .butterfly {
@@ -585,7 +591,8 @@ html:not(html:hover) .cursor::after {
     padding: 20px;
     opacity: 0;
 }
-.product:hover img{
+
+.product:hover img {
     scale: 1.05;
     transition: all 0.6s ease;
 }
@@ -619,4 +626,46 @@ html:not(html:hover) .cursor::after {
 
 .product.fade-bottom {
     animation: fade 1.6s ease;
+}
+
+
+@media (max-width: 600px) {
+
+    .c-header {
+        margin-top: 10rem;
+        height: 60vh;
+    }
+
+    .butterfly {
+        width: 250px;
+        height: 250px;
+        bottom: -10%;
+    }
+
+    .c-header_title .small-h {
+        font-size: 28px;
+    }
+
+    .c-header_title .small-h br {
+        display: none
+    }
+
+    .c-direction-block_item {
+        font-size: 60px;
+    }
+
+    .img-rotate {
+        width: 250px;
+        height: 250px;
+        transform: translateY(0);
+    }
+
+    .img-rotate .fixed_image {
+        padding: 80px;
+    }
+
+    .c-lerp-block_title span {
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
 }
